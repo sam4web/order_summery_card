@@ -1,0 +1,159 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --accent-color: hsl(245, 83%, 69%);
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: var(--pale-blue) url(./images/pattern-background-desktop.svg)
+    no-repeat;
+  background-size: contain;
+  color: var(--desaturated-blue);
+  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--bright-blue);
+}
+
+#page-wrapper {
+  background-color: #fff;
+  border-radius: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 10px 0px var(--desaturated-blue);
+}
+
+#top-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
+}
+
+#content-section {
+  padding: 2rem;
+}
+
+#content-section > * {
+  margin-bottom: 2rem;
+}
+
+#title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+#description {
+  margin: 1.5rem auto;
+  width: 100%;
+  max-width: 310px;
+}
+
+#pricing-section {
+  background-color: var(--very-pale-blue);
+  border-radius: 15px;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+#plans {
+  font-size: 0.8rem;
+  flex: 1;
+  margin-left: 1.5rem;
+  text-align: left;
+}
+
+#pricing-section a {
+  font-weight: 900;
+}
+
+#pricing-section a:hover {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+button {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: var(--bright-blue);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 7px 15px -5px var(--bright-blue);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+}
+
+#cancel-order {
+  color: var(--desaturated-blue);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+#cancel-order:hover {
+  color: var(--dark-blue);
+}
+
+#attribution {
+  margin-top: 5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+#attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 425px) {
+  #page-wrapper {
+    width: 95%;
+  }
+
+  #content-section {
+    padding: 2rem 1rem;
+  }
+
+  html {
+    font-size: 84%;
+  }
+}
